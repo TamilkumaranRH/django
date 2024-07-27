@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        background-color: skyblue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+    .textbox{
+        width: 300px;
+        padding: 20px;
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.8);
+        border-radius: 15px;
+    }
+    .textbox input[type="text"],
+    .text-textarea{
+        display:flex;
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+    .textbox button{
+        background-color:#000;
+        color:white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    .textbox button:hover{
+        background-color: lime;
+    }
+</style>
+</head>
+<body>
+    <form action="" method="post">
+
+        {% csrf_token %}
+    <div class="textbox">
+        <label type="text">User ID</label>
+        <input type="text" placeholder="Enter your ID" name="username">
+        <label type="text">Password</label>
+        <input type="text" placeholder="Enter your password" name="password">
+        <button type="submit">S U B M I T</button>
+    </div>
+</form>
+</body>
+</html>
