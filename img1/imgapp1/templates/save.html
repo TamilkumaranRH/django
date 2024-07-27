@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: skyblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .textbox{
+            width: 300px;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+            border-radius: 12px;
+        }
+        .textbox input[type="text"],
+        .text-textarea{
+            display: grid;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .textbox button{
+            background-color:#000;
+            color: black;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .textbox button:hover{
+            background-color: lime;
+        }
+    </style>
+</head>
+<body>
+    <div class="textbox">
+    <form action = "" method = "post">
+        {% csrf_token %}
+        {{form.as_p }}
+        <input type="submit" value="Submit">
+    
+    </form>
+</div>
+</body>
+</html>
