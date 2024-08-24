@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>livewire</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!---we had linked our css file----->
+</head>
+<body>
+    <section id="next1">
+    <div class="full-page">
+        <div class="navbar">
+            <div class="live">
+                <h1>LIVEWIRE</h1>
+            </div>
+            <nav>
+                <ul id='MenuItems'>
+                    <li><a href='#next1'>Home</a></li>
+                    <li><a href='#next2'>Student View</a></li>
+                    <li><a href='#next4'>About Us</a></li>
+                    <li><a href='#'>Contact</a></li>
+                    <li><button class='loginbtn' onclick="document.getElementById('login-form').style.display='block'" style="width:auto;">Login</button></li>
+                </ul>
+            </nav>
+        </div>
+    
+        <div id='login-form'class='login-page'>
+            <div class="form-box">
+                <div class='button-box'>
+                    <div id='btn'></div>
+                    <button type='button'onclick='Student()'class='toggle-btn'>Student Login</button>
+                    <button type='button'onclick='Admin()'class='toggle-btn'>Admin Login </button>
+                </div>
+             
+		 <form id='register' class='input-group-register'>
+		     <input type='text'class='input-field'placeholder='First Name' required>
+		     <input type='text'class='input-field'placeholder='Last Name ' required>
+		     <input type='email'class='input-field'placeholder='Email Id' required>
+		     <input type='password'class='input-field'placeholder='Enter Password' required>
+		     <input type='password'class='input-field'placeholder='Confirm Password'  required>
+		     <input type='checkbox'class='check-box'><span>I agree to the terms and                                                   conditions</span>
+                    <button type='submit'class='submit-btn'>Sign up</button>
+	         </form>
+
+             <form id='login' class='input-group-login'>
+                <input type='text'class='input-field'placeholder='Email Id' required >
+                <input type='password'class='input-field'placeholder='Enter Password' required>
+                <input type='checkbox'class='check-box'><span>Remember Password</span>
+                <button type='submit'class='submit-btn'>Sign in</button>
+            </form>
+            </div>
+        </div>
+    <script>
+        var x=document.getElementById('register');
+		var y=document.getElementById('login');
+		var z=document.getElementById('btn');
+
+        function Student()
+		{
+			x.style.left='50px';
+			y.style.left='450px';
+			z.style.left='0px';
+		}
+		function Admin()
+		{
+			x.style.left='-400px';
+			y.style.left='80px';
+			z.style.left='110px';
+		}
+		
+	</script>
+	<script>
+        var modal = document.getElementById('login-form');
+        window.onclick = function(event) 
+        {
+            if (event.target == modal) 
+            {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</section>
+
+    <section id="next2">
+        <div class="slider">
+            <div class="image">
+                <input type="radio" name="slide" id="img1" checked>
+                <input type="radio" name="slide" id="img2">
+                <input type="radio" name="slide" id="img3">
+                <input type="radio" name="slide" id="img4">
+                <input type="radio" name="slide" id="img5">
+                <input type="radio" name="slide" id="img6">
+                <input type="radio" name="slide" id="img7">
+                <input type="radio" name="slide" id="img8">
+                <input type="radio" name="slide" id="img9">
+                <input type="radio" name="slide" id="img10">
+
+                <img src="C_Logo.png" class="m1" alt="img1">
+                <img src="C++_Logo.png" class="m2" alt="img2">
+                <img src="java-logo1.png" class="m3" alt="img3">
+                <img src="Python-Logo.png" class="m4" alt="img4">
+                <img src="javascript.png" class="m5" alt="img5">
+                <img src="Mysql_logo.png" class="m6" alt="img6">
+                <img src="PHP-logo.svg.png" class="m7" alt="img7">
+                <img src="HTML5_logo.svg.png" class="m8" alt="img8">
+                <img src="css-logo.png" class="m9" alt="img9">
+                <img src="Node.js_logo.svg.png" class="m10" alt="img10">
+
+            </div>
+            <div class="dots">
+                <label for="img1"></label>
+                <label for="img2"></label>
+                <label for="img3"></label>
+                <label for="img4"></label>
+                <label for="img5"></label>
+                <label for="img6"></label>
+                <label for="img7"></label>
+                <label for="img8"></label>
+                <label for="img9"></label>
+                <label for="img10"></label>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="next4">
+        <div class="us">
+            <h1>ABOUT US</h1>
+            <p>
+
+            </p>
+        </div>
+    </section>
+</div>
+</body>
+</html>
