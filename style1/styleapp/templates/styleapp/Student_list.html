@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% block content %}
+    <table class="table table-borderless">
+        <tr>
+            <td>Firstname</td>
+            <td>Lastname</td>
+            <td>Email Id</td>
+            <td>Enter Password</td>
+            <td>Confirm Password</td>
+            <a href="{% url 'StudentRetrieve' %}" > Add new </a>
+        </tr>
+
+        {% for object in object_list %}
+        <tr>
+            <td>{{object.firstname}}</td>
+            <td>{{object.lastname}}</td>
+            <td>{{object.email id}}</td>
+            <td>{{object.enter Password}}</td>
+            <td>{{object.confirm Password}}</td>
+        </tr>
+
+        <td>
+            <button><a href = '/{{object.pk}}/delete' >Delete</a>
+            </button>
+        </td>
+
+        <td>
+            <button>   <a href = '/{{object.pk}}/update' >Update</a>
+            </button>
+        </td>
+        {% endfor%}
+    </table>
+    {% endblock content %}
+</body>
+</html>

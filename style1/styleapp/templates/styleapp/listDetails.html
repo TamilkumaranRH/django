@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    table{
+        justify-content: center;
+        align-items: center;
+        margin: 70px ;
+    }
+    th:hover{
+        background-color: greenyellow;
+    }
+    td:hover{
+        background-color:coral
+}
+</style>
+</head>
+<body>
+ 
+    <table border="4">
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email Id</th>
+            <th>Password</th>
+            <th>Confirm Password</th>
+        </tr>
+    {% for detail in details %}
+    <tr>
+        <td>{{ detail.first_name }}</td>
+        <td>{{ detail.last_name}}</td>
+        <td>{{ detail.email_id}}</td>
+        <td>{{ detail.enter_password}}</td>
+        <td>{{ detail.confirm_password}}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>

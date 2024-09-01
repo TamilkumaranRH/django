@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>livewire</title>
+    <link rel="stylesheet" href="static/style.css?{% now 'U' %}">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!---we had linked our css file----->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+<section id="next1">
+    <div class="full-page">
+        <div class="navbar">
+            <div class="live">
+                <h1>LIVEWIRE</h1>
+            </div>
+            <nav>
+                <ul id='MenuItems'>
+                    <li><a href='#next1'>Home</a></li>
+                    <li><a href='#next2'>Student View</a></li>
+                    <li><a href='#next3'>About Us</a></li>
+                    <li><a href='#'>Contact</a></li>
+                    <li><button class='loginbtn' onclick="document.getElementById('login-form').style.display='block'" style="width:auto;">Login</button></li>
+                </ul>
+            </nav>
+        </div>
+    
+        <div id='login-form'class='login-page'>
+            <div class="form-box">
+                <div class='button-box'>
+                    <div id='btn'></div>
+                    <button type='button'onclick='Student()'class='toggle-btn'>Student Login</button>
+                    <button type='button'onclick='Admin()'class='toggle-btn'>Admin Login </button>
+                </div>
+              
+		   <form id='register' class='input-group-register' method="post" action="{% url 'DetailsForm' %}">
+            {% csrf_token %}
+		     <input type='text'class='input-field' name="first_name" placeholder='First Name' required>
+		     <input type='text'class='input-field' name="last_name" placeholder='Last Name ' required>
+		     <input type='email'class='input-field' name="email_id" placeholder='Email Id' required>
+		     <input type='password'class='input-field' name="enter_password" placeholder='Enter Password' required>
+		     <input type='password'class='input-field' name="confirm_password" placeholder='Confirm Password'  required>
+		     <input type='checkbox'class='check-box'><span>I agree to the terms and                                                   conditions</span>
+                    <button type='submit'class='submit-btn'>Sign up</button>
+	         </form>
+            
+             <form id='login' class='input-group-login' method="post" action="{% url 'DetailsList' %}">
+                {% csrf_token %}
+                <input type='text'class='input-field' name="email_id" placeholder='Email Id' required >
+                <input type='password'class='input-field'name="enter_password" placeholder='Enter Password' required>
+                <input type='checkbox'class='check-box'><span>Remember Password</span>
+                <button type='submit'class='submit-btn'>Sign in</button>
+            </form>
+            </div>
+        </div>
+    <script>
+        var x=document.getElementById('register');
+		var y=document.getElementById('login');
+		var z=document.getElementById('btn');
+
+        function Student()
+		{
+			x.style.left='50px';
+			y.style.left='450px';
+			z.style.left='0px';
+		}
+		function Admin()
+		{
+			x.style.left='-400px';
+			y.style.left='80px';
+			z.style.left='110px';
+		}
+		
+	</script>
+	<!-- <script>
+        var modal = document.getElementById('login-form');
+        window.onclick = function(event) 
+        {
+            if (event.target == modal) 
+            {
+                modal.style.display = "none";
+            }
+        }
+    </script> -->
+</section>
+
+<section id="next2">
+        <div class="slider">
+            <div class="image">
+                <input type="radio" name="slide" id="img1" checked>
+                <input type="radio" name="slide" id="img2">
+                <input type="radio" name="slide" id="img3">
+                <input type="radio" name="slide" id="img4">
+                <input type="radio" name="slide" id="img5">
+                <input type="radio" name="slide" id="img6">
+                <input type="radio" name="slide" id="img7">
+                <input type="radio" name="slide" id="img8">
+                <input type="radio" name="slide" id="img9">
+                <input type="radio" name="slide" id="img10">
+
+               <img src="static/C_Logo.png" class="m1" alt="img1">
+                <img src="static/c++.png" class="m2" alt="img2">
+                <img src="static/java-logo1.png" class="m3" alt="img3">
+                <img src="static/Python-Logo.png" class="m4" alt="img4">
+                <img src="static/javascript.png" class="m5" alt="img5">
+                <img src="static/Mysql_logo.png" class="m6" alt="img6">
+                <img src="static/PHP-.svg.png" class="m7" alt="img7">
+                <img src="static/HTML5.svg.png" class="m8" alt="img8">
+                <img src="static/css-logo.png" class="m9" alt="img9">
+                <img src="static/Node.js_.svg.png" class="m10" alt="img10">
+                <img src="static/excel.png" class="m11" alt="img11">
+                <img src="static/net.png" class="m12" alt="img12">
+
+            </div>
+            <div class="dots">
+                <label for="img1"></label>
+                <label for="img2"></label>
+                <label for="img3"></label>
+                <label for="img4"></label>
+                <label for="img5"></label>
+                <label for="img6"></label>
+                <label for="img7"></label>
+                <label for="img8"></label>
+                <label for="img9"></label>
+                <label for="img10"></label>
+
+            </div>
+        </div>
+</section>
+
+<section id="next3">
+        <div class="us">
+            <h1>ABOUT US</h1>
+            <div class="im">
+                <img src="logo.png" alt="image">
+            </div>
+            <p>
+                LIVEWIRE - a division of CADD Centre Training Services Pvt Ltd, is a well established and innovative training organization, servicing customers across the country.
+
+                LIVEWIRE have a peerless engagement model, that seeks to balance, students need with industries requirements. 
+                With a plethora of cutting edge courses in our kitty, we deliver value to individuals and companies alike with skill development expertise.
+                
+                LIVEWIRE has training centres in 3 outstanding states in India – Tamil Nadu, Kerala and Karnataka.
+                
+                LIVEWIRE ’s training solutions in IT, ITeS, Engineering Design and Process Management, (EDO/EPO) Knowledge Process Outsourcing (KPO), 
+                Business Process Management (BPM), IT Service Management (ITSM) and Executive Management skill enhancement has imparted over thousands of learners since inception.
+                
+                LIVEWIRE’s education process management, curriculum and product development, instructional excellence, 
+                and training delivery is well known and that made LIVEWIRE as the most preferred training partner for over thousands of learners.
+                
+                LIVEWIRE hopes to be among the leading training organizations in the world within this decade.
+                
+            </p>
+            <p>
+                <strong>FOR ANY INFORMATION</strong><a href="http://www.livewireindia.com ">@livewireindia</a></p>
+
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-square-twitter"></i>
+            <i class="fa-brands fa-square-x-twitter"></i>
+            <i class="fa-brands fa-square-whatsapp"></i>
+            <i class="fa-brands fa-square-instagram"></i>
+        </div>
+</section>
+</div>
+
+</body>
+</html>
